@@ -52,7 +52,14 @@ Note: unsigned extensions require `xpinstall.signatures.required` set to `false`
 2. Click "Open with Silo"
 3. Silo's picker appears, letting you choose a browser or profile
 
+**Note:** Each browser row in Silo's picker has an "Always" button that creates a rule for that domain. If you click it, that domain will skip the picker and open silently in your chosen browser next time you use "Open with Silo".
+
 The originating site sees nothing. No data is sent to the site about the redirect.
+
+## See also
+
+- [Silo](https://github.com/no-faff/Silo) - the browser picker itself
+- [Find](https://github.com/no-faff/ulauncher-find) - Ulauncher extension for finding files instantly
 
 ## Licence
 

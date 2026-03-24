@@ -19,10 +19,19 @@ def read_message():
 def main():
     msg = read_message()
     if msg and "url" in msg:
-        # Try system install first, fall back to cargo build
+        import os
         import shutil
-        silo_bin = shutil.which("silo") or "/home/fred/projects/silo/target/release/silo"
-        subprocess.Popen([silo_bin, msg["url"]])
+
+        # shutil.which checks PATH, but Firefox's native messaging environment
+        # may not include ~/.local/bin where Silo's install.sh puts the binary
+        silo_bin = shutil.which("silo")
+        if not silo_bin:
+            fallback = os.path.expanduser("~/.local/bin/silo")
+            if os.path.isfile(fallback) and os.access(fallback, os.X_OK):
+                silo_bin = fallback
+
+        if silo_bin:
+            subprocess.Popen([silo_bin, msg["url"]])
 
 
 if __name__ == "__main__":
