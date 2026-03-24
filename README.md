@@ -2,6 +2,8 @@
 
 A Firefox extension that adds "Open with Silo" to the right-click context menu on any link. Sends the URL to [Silo](https://github.com/no-faff/Silo), a browser picker for Linux, so you can choose which browser or profile to open it in.
 
+There is no toolbar button. Just install it and right-click any link.
+
 ![Context menu screenshot](screenshot.png)
 
 ## Requirements
@@ -56,9 +58,20 @@ Note: unsigned extensions require `xpinstall.signatures.required` set to `false`
 
 The originating site sees nothing. No data is sent to the site about the redirect.
 
+## Permissions
+
+Firefox will show that this extension needs permission to "Exchange messages with programs other than Firefox". This is the native messaging permission. It means the extension can talk to Silo, which is a program installed on your computer. This is the same mechanism used by password managers like KeePassXC and Bitwarden.
+
+The extension does not read or modify any web pages. It does not access your browsing history, bookmarks, passwords or any other data. It has no network access. The only thing it does is send the URL you right-clicked to Silo.
+
+## Privacy
+
+This extension collects no data. There is no telemetry, no analytics and no network access. The URL you click is sent to Silo on your local machine and nowhere else. The source code is public and you can verify this yourself.
+
 ## See also
 
 - [Silo](https://github.com/no-faff/Silo) - the browser picker itself
+- [Open with Silo for Chrome](https://github.com/no-faff/silo-chrome) - the Chrome/Chromium version
 - [Find](https://github.com/no-faff/ulauncher-find) - Ulauncher extension for finding files instantly
 
 ## Licence
