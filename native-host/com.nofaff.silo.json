@@ -1,0 +1,7 @@
+{
+  "name": "com.nofaff.silo",
+  "description": "Open links with Silo browser picker",
+  "path": "/usr/lib/silo/silo-host.py",
+  "type": "stdio",
+  "allowed_extensions": ["silo@nofaff.dev"]
+}

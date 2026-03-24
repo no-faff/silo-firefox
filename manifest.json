@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Open with Silo",
+  "version": "1.0",
+  "description": "Open links in other browsers using Silo",
+  "permissions": [
+    "contextMenus",
+    "nativeMessaging"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "icons": {
+    "48": "icons/silo-48.png",
+    "96": "icons/silo-96.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "silo@nofaff.dev"
+    }
+  }
+}
