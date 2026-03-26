@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Open with Silo",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Open links in other browsers using Silo",
   "permissions": [
     "contextMenus",
@@ -16,7 +16,11 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "silo@nofaff.dev"
+      "id": "silo@nofaff.dev",
+      "data_collection_permissions": {
+        "required": ["none"],
+        "optional": []
+      }
     }
   }
 }
